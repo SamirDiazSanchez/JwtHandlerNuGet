@@ -1,7 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Domain;
+using JwtHandler.Models;
 using Microsoft.IdentityModel.Tokens;
 
 namespace JwtHandler;
@@ -14,12 +14,12 @@ public static class Handler
   private static string? RefreshKey { get; set; }
   private static string? EncryptionKey { get; set; }
   
-  public static void Initialize(string issuer, string audience, string key, string refreshKey, string encryptionKey) {
-    Issuer = issuer;
-    Audience = audience;
-    Key = key;
-    RefreshKey = refreshKey;
-    EncryptionKey = encryptionKey;
+  public static void SetSettings(JwtSettings settings) {
+    Issuer = settings.Issuer;
+    Audience = settings.Audience;
+    Key = settings.Key;
+    RefreshKey = settings.RefreshKey;
+    EncryptionKey = settings.EncryptionKey;
   }
 
   public static TokenValidationParameters AccessValidationParameters() {

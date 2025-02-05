@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>JwtHandlerNuGet</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.4</Version>
     <Authors>Samir Diaz</Authors>
     <Company>Samir Diaz</Company>
     <Description>NuGet de gestion de Jwt.</Description>
@@ -17,10 +17,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.3.1" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>
